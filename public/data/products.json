@@ -1,8 +1,8 @@
 [
   {
-    "product_id": "1",
-    "product_title": "Realme 12",
-    "product_image": "/data/realme12.png",
+    "id": 1,
+    "title": "Realme 12",
+    "image": "/data/realme12.png",
     "category": "Mobile",
     "price": 29999,
     "description": "Realme 12 smartphone with advanced features and sleek design.",
@@ -16,9 +16,9 @@
     "rating": 4.5
   },
   {
-    "product_id": "2",
-    "product_title": "Realme Note 60",
-    "product_image": "/data/realmenote60.png",
+    "id": 2,
+    "title": "Realme Note 60",
+    "image": "/data/realmenote60.png",
     "category": "Mobile",
     "price": 12999,
     "description": "Realme Note 60 with large display and powerful processor.",
@@ -32,9 +32,9 @@
     "rating": 4.6
   },
   {
-    "product_id": "3",
-    "product_title": "Realme C61",
-    "product_image": "/data/realmec61.png",
+    "id": 3,
+    "title": "Realme C61",
+    "image": "/data/realmec61.png",
     "category": "Mobile",
     "price": 14999,
     "description": "Realme C61 budget-friendly smartphone with reliable performance.",
@@ -48,9 +48,9 @@
     "rating": 4.2
   },
   {
-    "product_id": "4",
-    "product_title": "Realme C63",
-    "product_image": "/data/realmec63.png",
+    "id": 4,
+    "title": "Realme C63",
+    "image": "/data/realmec63.png",
     "category": "Mobile",
     "price": 17999,
     "description": "Realme C63 with fast charging and smooth performance.",
@@ -64,9 +64,9 @@
     "rating": 4.3
   },
   {
-    "product_id": "5",
-    "product_title": "Realme C65",
-    "product_image": "/data/realmec65.png",
+    "id": 5,
+    "title": "Realme C65",
+    "image": "/data/realmec65.png",
     "category": "Mobile",
     "price": 19999,
     "description": "Realme C65 with large display and high-capacity battery.",
@@ -80,9 +80,9 @@
     "rating": 4.4
   },
   {
-    "product_id": "6",
-    "product_title": "Realme Note 50",
-    "product_image": "/data/realmenote50.png",
+    "id": 6,
+    "title": "Realme Note 50",
+    "image": "/data/realmenote50.png",
     "category": "Mobile",
     "price": 12499,
     "description": "Realme Note 50 with powerful camera and long-lasting battery.",
@@ -96,9 +96,9 @@
     "rating": 4.2
   },
   {
-    "product_id": "7",
-    "product_title": "Realme C67",
-    "product_image": "/data/realmec67.png",
+    "id": 7,
+    "title": "Realme C67",
+    "image": "/data/realmec67.png",
     "category": "Mobile",
     "price": 22999,
     "description": "Realme C67 offering excellent display quality and battery life.",
@@ -112,9 +112,9 @@
     "rating": 4.3
   },
   {
-    "product_id": "8",
-    "product_title": "Realme C51",
-    "product_image": "/data/realmec51.png",
+    "id": 8,
+    "title": "Realme C51",
+    "image": "/data/realmec51.png",
     "category": "Mobile",
     "price": 12999,
     "description": "Realme C51, a budget smartphone with impressive features.",
@@ -128,9 +128,9 @@
     "rating": 4.0
   },
   {
-    "product_id": "9",
-    "product_title": "Realme Pad",
-    "product_image": "/data/realmepad.png",
+    "id": 9,
+    "title": "Realme Pad",
+    "image": "/data/realmepad.png",
     "category": "Tablet",
     "price": 21999,
     "description": "Realme Pad with immersive display and powerful audio.",
@@ -143,9 +143,9 @@
     "rating": 4.4
   },
   {
-    "product_id": "10",
-    "product_title": "Realme Pad Mini",
-    "product_image": "/data/realmepadmini.png",
+    "id": 10,
+    "title": "Realme Pad Mini",
+    "image": "/data/realmepadmini.png",
     "category": "Tablet",
     "price": 21349,
     "description": "Realme Pad Mini with compact size and powerful performance.",
@@ -154,9 +154,9 @@
     "rating": 4.3
   },
   {
-    "product_id": "11",
-    "product_title": "Realme Book",
-    "product_image": "/data/realmebook.png",
+    "id": 11,
+    "title": "Realme Book",
+    "image": "/data/realmebook.png",
     "category": "Laptop",
     "price": 59999,
     "description": "Realme Book laptop with slim design and high performance.",
@@ -170,9 +170,9 @@
     "rating": 4.7
   },
   {
-    "product_id": "12",
-    "product_title": "Realme Book Prime",
-    "product_image": "/data/realmebookprime.png",
+    "id": 12,
+    "title": "Realme Book Prime",
+    "image": "/data/realmebookprime.png",
     "category": "Laptop",
     "price": 73999,
     "description": "Realme Book Prime with enhanced processing and memory.",
@@ -186,9 +186,9 @@
     "rating": 4.8
   },
   {
-    "product_id": "13",
-    "product_title": "Realme Watch 2",
-    "product_image": "/data/realmewatch2.png",
+    "id": 13,
+    "title": "Realme Watch 2",
+    "image": "/data/realmewatch2.png",
     "category": "Smart Watch",
     "price": 4699,
     "description": "Realme Watch 2 with health tracking features and long battery life.",
@@ -202,9 +202,9 @@
     "rating": 4.3
   },
   {
-    "product_id": "14",
-    "product_title": "Realme Watch 2 Pro",
-    "product_image": "/data/realmewatch2pro.png",
+    "id": 14,
+    "title": "Realme Watch 2 Pro",
+    "image": "/data/realmewatch2pro.png",
     "category": "Smart Watch",
     "price": 6599,
     "description": "Realme Watch 2 Pro with GPS tracking and enhanced features.",
@@ -218,9 +218,9 @@
     "rating": 4.4
   },
   {
-    "product_id": "15",
-    "product_title": "Realme Band 2",
-    "product_image": "/data/realmeband2.png",
+    "id": 15,
+    "title": "Realme Band 2",
+    "image": "/data/realmeband2.png",
     "category": "Smart Watch",
     "price": 3849,
     "description": "Realme Band 2 with fitness tracking and multiple sports modes.",
@@ -233,9 +233,9 @@
     "rating": 4.1
   },
   {
-    "product_id": "16",
-    "product_title": "Realme Buds Q2",
-    "product_image": "/data/realmebudsq2.png",
+    "id": 16,
+    "title": "Realme Buds Q2",
+    "image": "/data/realmebudsq2.png",
     "category": "TWS",
     "price": 2199,
     "description": "Realme Buds Q2 with active noise cancellation and bass boost driver.",
@@ -248,9 +248,9 @@
     "rating": 4.1
   },
   {
-    "product_id": "17",
-    "product_title": "Realme Buds Air 2",
-    "product_image": "/data/realmebudsair2.png",
+    "id": 17,
+    "title": "Realme Buds Air 2",
+    "image": "/data/realmebudsair2.png",
     "category": "TWS",
     "price": 4399,
     "description": "Realme Buds Air 2 with active noise cancellation and clear sound quality.",
@@ -263,9 +263,9 @@
     "rating": 4.5
   },
   {
-    "product_id": "18",
-    "product_title": "Realme Buds Air 2 Neo",
-    "product_image": "/data/realmebudsair2neo.png",
+    "id": 18,
+    "title": "Realme Buds Air 2 Neo",
+    "image": "/data/realmebudsair2neo.png",
     "category": "TWS",
     "price": 3999,
     "description": "Realme Buds Air 2 Neo with ANC and quick charging.",
