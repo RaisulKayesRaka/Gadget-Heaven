@@ -1,5 +1,6 @@
 import Navbar from "./Navbar";
 import Banner from "./Banner";
+import Footer from "./Footer";
 
 export default function Header() {
   return (
@@ -8,6 +9,7 @@ export default function Header() {
         <Navbar />
       </div>
       <Banner />
+      <Footer/>
     </section>
   );
 }

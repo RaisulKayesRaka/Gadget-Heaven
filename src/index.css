@@ -3,6 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+:root{
+  background-color: #f3f4f6;
   font-family: "Sora", serif;
 }

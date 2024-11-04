@@ -1,7 +1,7 @@
 export default function Banner() {
   return (
     <section className="mx-6">
-      <div className="bg-[#9538E2]">
+      <div className="bg-[#9538E2] text-white">
         <div className="mx-auto w-11/12 max-w-screen-xl">
           <div className="mx-auto max-w-screen-lg text-center">
             <h1 className="py-6 text-3xl font-bold md:text-4xl lg:text-5xl">
