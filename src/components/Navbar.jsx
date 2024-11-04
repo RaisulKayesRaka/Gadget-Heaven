@@ -1,10 +1,16 @@
+import { NavLink } from "react-router-dom";
+
 export default function Navbar() {
   return (
     <section className="py-2">
-      <div className="navbar mx-auto max-w-screen-xl w-11/12">
+      <div className="navbar mx-auto w-11/12 max-w-screen-xl">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden pl-0">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost pl-0 lg:hidden"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -22,16 +28,16 @@ export default function Navbar() {
             </div>
             <ul
               tabIndex={0}
-              className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow text-black"
+              className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 text-black shadow"
             >
               <li>
-                <a>Home</a>
+                <NavLink to="/">Home</NavLink>
               </li>
               <li>
-                <a>Statistics</a>
+                <NavLink to="/statistics">Statistics</NavLink>
               </li>
               <li>
-                <a>Dashboard</a>
+                <NavLink to="/dashboard">Dashboard</NavLink>
               </li>
             </ul>
           </div>
@@ -40,25 +46,21 @@ export default function Navbar() {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>Home</a>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <a>Statistics</a>
+              <NavLink to="/statistics">Statistics</NavLink>
             </li>
             <li>
-              <a>Dashboard</a>
+              <NavLink to="/dashboard">Dashboard</NavLink>
             </li>
           </ul>
         </div>
         <div className="navbar-end gap-4">
           <div className="dropdown dropdown-end">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn btn-circle"
-            >
+            <div tabIndex={0} role="button" className="btn btn-circle">
               <div className="indicator">
-              <img src="/src/assets/cart.svg" alt="" className="h-5 w-5"/>
+                <img src="/src/assets/cart.svg" alt="" className="h-5 w-5" />
                 <span className="badge indicator-item badge-sm">8</span>
               </div>
             </div>
@@ -70,7 +72,7 @@ export default function Navbar() {
                 <span className="text-lg font-bold text-black">8 Items</span>
                 <span className="text-info">Subtotal: $999</span>
                 <div className="card-actions">
-                  <button className="btn bg-[#9538E2] text-white btn-block">
+                  <button className="btn btn-block bg-[#9538E2] text-white">
                     View cart
                   </button>
                 </div>
@@ -78,13 +80,9 @@ export default function Navbar() {
             </div>
           </div>
           <div className="dropdown dropdown-end">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn btn-circle"
-            >
+            <div tabIndex={0} role="button" className="btn btn-circle">
               <div className="indicator">
-                <img src="/src/assets/heart.svg" alt="" className="h-5 w-5"/>
+                <img src="/src/assets/heart.svg" alt="" className="h-5 w-5" />
                 <span className="badge indicator-item badge-sm">8</span>
               </div>
             </div>
@@ -96,7 +94,7 @@ export default function Navbar() {
                 <span className="text-lg font-bold text-black">8 Items</span>
                 <span className="text-info">Subtotal: $999</span>
                 <div className="card-actions">
-                  <button className="btn bg-[#9538E2] text-white btn-block">
+                  <button className="btn btn-block bg-[#9538E2] text-white">
                     View cart
                   </button>
                 </div>
