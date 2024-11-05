@@ -1,6 +1,19 @@
 import { NavLink } from "react-router-dom";
+import { getAllProductsFromCart, getAllProductsFromWishlist } from "..";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
+  const [cart, setCart] = useState([]);
+  const [wishlist, setWishlist] = useState([]);
+  const newcart = getAllProductsFromCart();
+  const newfavorite = getAllProductsFromWishlist();
+
+  useEffect(() => {
+    setCart(newcart);
+    setWishlist(newfavorite);
+  }, [newcart, newfavorite]);
+
+
   return (
     <section className="py-2">
       <div className="navbar mx-auto w-11/12 max-w-screen-xl">
@@ -61,7 +74,7 @@ export default function Navbar() {
             <div tabIndex={0} role="button" className="btn btn-circle bg-white shadow-none">
               <div className="indicator">
                 <img src="/src/assets/cart.svg" alt="" className="h-5 w-5" />
-                <span className="badge indicator-item badge-sm">8</span>
+                <span className="badge indicator-item badge-sm">{cart.length}</span>
               </div>
             </div>
             <div
@@ -69,8 +82,8 @@ export default function Navbar() {
               className="card dropdown-content card-compact z-[1] mt-3 w-52 bg-base-100 shadow"
             >
               <div className="card-body">
-                <span className="text-lg font-bold text-black">8 Items</span>
-                <span className="text-info">Subtotal: $999</span>
+                <span className="text-lg font-bold text-black">{cart.length} Items</span>
+                <span className="text-info">Subtotal: {cart.reduce((a, b) => a + b.price, 0)}</span>
                 <div className="card-actions">
                   <button className="btn btn-block bg-[#9538E2] text-white">
                     View cart
@@ -83,7 +96,7 @@ export default function Navbar() {
             <div tabIndex={0} role="button" className="btn btn-circle bg-white shadow-none">
               <div className="indicator">
                 <img src="/src/assets/heart.svg" alt="" className="h-5 w-5" />
-                <span className="badge indicator-item badge-sm">8</span>
+                <span className="badge indicator-item badge-sm">{wishlist.length}</span>
               </div>
             </div>
             <div
@@ -91,11 +104,11 @@ export default function Navbar() {
               className="card dropdown-content card-compact z-[1] mt-3 w-52 bg-base-100 shadow"
             >
               <div className="card-body">
-                <span className="text-lg font-bold text-black">8 Items</span>
-                <span className="text-info">Subtotal: $999</span>
+                <span className="text-lg font-bold text-black">{wishlist.length} Items</span>
+                <span className="text-info">Subtotal: {wishlist.reduce((a, b) => a + b.price, 0)}</span>
                 <div className="card-actions">
                   <button className="btn btn-block bg-[#9538E2] text-white">
-                    View cart
+                    View wishlist
                   </button>
                 </div>
               </div>
