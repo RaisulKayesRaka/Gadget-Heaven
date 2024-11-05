@@ -4,15 +4,13 @@ import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const [cart, setCart] = useState([]);
+
   const [wishlist, setWishlist] = useState([]);
-  const newcart = getAllProductsFromCart();
-  const newfavorite = getAllProductsFromWishlist();
 
   useEffect(() => {
-    setCart(newcart);
-    setWishlist(newfavorite);
-  }, [newcart, newfavorite]);
-
+    setCart(getAllProductsFromCart());
+    setWishlist(getAllProductsFromWishlist());
+  }, []);
 
   return (
     <section className="py-2">
@@ -41,7 +39,7 @@ export default function Navbar() {
             </div>
             <ul
               tabIndex={0}
-              className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 text-black shadow gap-2"
+              className="menu dropdown-content menu-sm z-[1] mt-3 w-52 gap-2 rounded-box bg-base-100 p-2 text-black shadow"
             >
               <li>
                 <NavLink to="/">Home</NavLink>
@@ -57,7 +55,7 @@ export default function Navbar() {
           <a className="text-xl font-bold">Gadget Heaven</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 gap-4">
+          <ul className="menu menu-horizontal gap-4 px-1">
             <li>
               <NavLink to="/">Home</NavLink>
             </li>
@@ -71,10 +69,16 @@ export default function Navbar() {
         </div>
         <div className="navbar-end gap-4">
           <div className="dropdown dropdown-end">
-            <div tabIndex={0} role="button" className="btn btn-circle bg-white shadow-none">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-circle bg-white shadow-none"
+            >
               <div className="indicator">
                 <img src="/src/assets/cart.svg" alt="" className="h-5 w-5" />
-                <span className="badge indicator-item badge-sm">{cart.length}</span>
+                <span className="badge indicator-item badge-sm">
+                  {cart.length}
+                </span>
               </div>
             </div>
             <div
@@ -82,8 +86,12 @@ export default function Navbar() {
               className="card dropdown-content card-compact z-[1] mt-3 w-52 bg-base-100 shadow"
             >
               <div className="card-body">
-                <span className="text-lg font-bold text-black">{cart.length} Items</span>
-                <span className="text-info">Subtotal: {cart.reduce((a, b) => a + b.price, 0)}</span>
+                <span className="text-lg font-bold text-black">
+                  {cart.length} Items
+                </span>
+                <span className="text-info">
+                  Subtotal: {cart.reduce((a, b) => a + b.price, 0)}
+                </span>
                 <div className="card-actions">
                   <button className="btn btn-block bg-[#9538E2] text-white">
                     View cart
@@ -93,10 +101,16 @@ export default function Navbar() {
             </div>
           </div>
           <div className="dropdown dropdown-end">
-            <div tabIndex={0} role="button" className="btn btn-circle bg-white shadow-none">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-circle bg-white shadow-none"
+            >
               <div className="indicator">
                 <img src="/src/assets/heart.svg" alt="" className="h-5 w-5" />
-                <span className="badge indicator-item badge-sm">{wishlist.length}</span>
+                <span className="badge indicator-item badge-sm">
+                  {wishlist.length}
+                </span>
               </div>
             </div>
             <div
@@ -104,8 +118,12 @@ export default function Navbar() {
               className="card dropdown-content card-compact z-[1] mt-3 w-52 bg-base-100 shadow"
             >
               <div className="card-body">
-                <span className="text-lg font-bold text-black">{wishlist.length} Items</span>
-                <span className="text-info">Subtotal: {wishlist.reduce((a, b) => a + b.price, 0)}</span>
+                <span className="text-lg font-bold text-black">
+                  {wishlist.length} Items
+                </span>
+                <span className="text-info">
+                  Subtotal: {wishlist.reduce((a, b) => a + b.price, 0)}
+                </span>
                 <div className="card-actions">
                   <button className="btn btn-block bg-[#9538E2] text-white">
                     View wishlist
