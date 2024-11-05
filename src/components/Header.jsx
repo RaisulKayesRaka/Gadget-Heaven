@@ -14,7 +14,9 @@ export default function Header() {
           <Banner />
         </section>
       ) : (
-        <Navbar />
+        <div className="mx-6 mt-6">
+          <Navbar /> 
+        </div>
       )}
     </>
   );

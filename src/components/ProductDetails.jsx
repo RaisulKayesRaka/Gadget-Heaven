@@ -22,18 +22,20 @@ export default function ProductDetails() {
         <div className="mx-auto max-w-screen-lg rounded-2xl bg-white p-4">
           <div className="flex items-center justify-center">
             <div className="flex-1">
-              <img src={product.image} alt=""/>
+              <img src={product.image} alt="" />
             </div>
             <div className="flex-1">
-              <h3 className="text-2xl font-bold mb-3">{product.title}</h3>
-              <p className="text-lg font-semibold mb-4">Price: {product.price} Tk</p>
+              <h3 className="mb-3 text-2xl font-bold">{product.title}</h3>
+              <p className="mb-4 text-lg font-semibold">
+                Price: {product.price} Tk
+              </p>
               <span
                 className={`${product.availability ? "bg-green-50 text-green-500" : "bg-red-50 text-red-500"} rounded-full border px-2 py-1`}
               >
                 {product.availability ? "In Stock" : "Out of Stock"}
               </span>
               <p className="my-4">{product.description}</p>
-              <h4 className="font-bold mb-2">Specification:</h4>
+              <h4 className="mb-2 font-bold">Specification:</h4>
               <ol className="mb-4">
                 {product.Specification?.map((spec, index) => (
                   <li key={index}>
@@ -41,9 +43,10 @@ export default function ProductDetails() {
                   </li>
                 ))}
               </ol>
-              <h4 className="font-bold mb-2">Rating ⭐</h4>
-              <div className="flex items-center gap-4 mb-4">
+              <h4 className="mb-2 font-bold">Rating ⭐</h4>
+              <div className="mb-4 flex items-center gap-4">
                 <ReactStars
+                  key={product.id}
                   count={5}
                   value={product.rating}
                   size={24}
@@ -58,7 +61,7 @@ export default function ProductDetails() {
                 <button className="flex gap-2 rounded-full bg-[#9538E2] px-6 py-3 font-bold text-white">
                   Add to Cart <img src="../src/assets/cart-white.svg" alt="" />
                 </button>
-                <button className="rounded-full border bg-white p-3 font-bold aspect-square">
+                <button className="aspect-square rounded-full border bg-white p-3 font-bold">
                   <img src="../src/assets/heart.svg" alt="" />
                 </button>
               </div>

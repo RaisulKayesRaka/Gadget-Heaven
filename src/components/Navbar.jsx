@@ -28,7 +28,7 @@ export default function Navbar() {
             </div>
             <ul
               tabIndex={0}
-              className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 text-black shadow"
+              className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 text-black shadow gap-2"
             >
               <li>
                 <NavLink to="/">Home</NavLink>
@@ -44,7 +44,7 @@ export default function Navbar() {
           <a className="text-xl font-bold">Gadget Heaven</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal px-1 gap-4">
             <li>
               <NavLink to="/">Home</NavLink>
             </li>
@@ -58,7 +58,7 @@ export default function Navbar() {
         </div>
         <div className="navbar-end gap-4">
           <div className="dropdown dropdown-end">
-            <div tabIndex={0} role="button" className="btn btn-circle">
+            <div tabIndex={0} role="button" className="btn btn-circle bg-white shadow-none">
               <div className="indicator">
                 <img src="/src/assets/cart.svg" alt="" className="h-5 w-5" />
                 <span className="badge indicator-item badge-sm">8</span>
@@ -80,7 +80,7 @@ export default function Navbar() {
             </div>
           </div>
           <div className="dropdown dropdown-end">
-            <div tabIndex={0} role="button" className="btn btn-circle">
+            <div tabIndex={0} role="button" className="btn btn-circle bg-white shadow-none">
               <div className="indicator">
                 <img src="/src/assets/heart.svg" alt="" className="h-5 w-5" />
                 <span className="badge indicator-item badge-sm">8</span>
