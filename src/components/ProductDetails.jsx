@@ -22,6 +22,7 @@ export default function ProductDetails() {
     }
   }, [data, id]);
 
+
   const handleAddToCart = (product) => {
     addToCart(product);
   };

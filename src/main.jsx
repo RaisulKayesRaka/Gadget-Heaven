@@ -11,6 +11,7 @@ import ErrorPage from "./components/ErrorPage.jsx";
 import ProductDetails from "./components/ProductDetails.jsx";
 import Cart from "./components/Cart.jsx";
 import Wishlist from "./components/Wishlist.jsx";
+import Support from "./components/Support.jsx";
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
             element: <Wishlist />,
           },
         ]
+      },
+      {
+        path: "/support",
+        element: <Support />,
       },
       {
         path: "/product/:id",

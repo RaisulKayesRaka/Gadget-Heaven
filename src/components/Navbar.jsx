@@ -45,10 +45,16 @@ export default function Navbar() {
                 <NavLink to="/">Home</NavLink>
               </li>
               <li>
+                <NavLink to="/about">About Us</NavLink>
+              </li>
+              <li>
                 <NavLink to="/statistics">Statistics</NavLink>
               </li>
               <li>
                 <NavLink to="/dashboard">Dashboard</NavLink>
+              </li>
+              <li>
+                <NavLink to="/support">Support</NavLink>
               </li>
             </ul>
           </div>
@@ -64,6 +70,9 @@ export default function Navbar() {
             </li>
             <li>
               <NavLink to="/dashboard">Dashboard</NavLink>
+            </li>
+            <li>
+              <NavLink to="/support">Support</NavLink>
             </li>
           </ul>
         </div>
