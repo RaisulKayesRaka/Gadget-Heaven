@@ -1,6 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import Card from "./Card";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 export default function ProductCards() {
   const data = useLoaderData();
@@ -14,10 +15,17 @@ export default function ProductCards() {
     }
   }, [category, data]);
   return (
-    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {filteredData.map((product) => (
-        <Card key={product.id} product={product} />
-      ))}
-    </div>
+    <>
+      <Helmet>
+        <title>
+          {category ? `${category} | Gadget Heaven` : "Gadget Heaven"}
+        </title>
+      </Helmet>
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {filteredData.map((product) => (
+          <Card key={product.id} product={product} />
+        ))}
+      </div>
+    </>
   );
 }

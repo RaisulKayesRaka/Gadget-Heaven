@@ -3,7 +3,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import Heading from "./Heading";
 import ReactStars from "react-rating-stars-component";
 import { addToCart, addToWishlist, getAllProductsFromWishlist } from "..";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 import { Context } from "../App";
 
 export default function ProductDetails() {
@@ -33,7 +33,7 @@ export default function ProductDetails() {
   };
 
   return (
-    <HelmetProvider>
+    <>
       <Helmet>
         <title>Product Details | Gadget Heaven</title>
       </Helmet>
@@ -107,6 +107,6 @@ export default function ProductDetails() {
           <div className="h-24"></div>
         </div>
       </div>
-    </HelmetProvider>
+    </>
   );
 }

@@ -1,11 +1,11 @@
 import { Outlet, useLoaderData } from "react-router-dom";
 import Categories from "./Categories";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 
 export default function Home() {
   const categories = useLoaderData();
   return (
-    <HelmetProvider>
+    <>
       <Helmet>
         <title>Gadget Heaven</title>
       </Helmet>
@@ -27,6 +27,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </HelmetProvider>
+    </>
   );
 }

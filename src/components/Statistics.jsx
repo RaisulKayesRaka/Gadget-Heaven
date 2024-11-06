@@ -1,4 +1,4 @@
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 import Heading from "./Heading";
 import {
   ComposedChart,
@@ -17,7 +17,7 @@ export default function Statistics() {
   const data = useLoaderData();
 
   return (
-    <HelmetProvider>
+    <>
       <Helmet>
         <title>Statistics | Gadget Heaven</title>
       </Helmet>
@@ -56,6 +56,6 @@ export default function Statistics() {
           </ResponsiveContainer>
         </div>
       </div>
-    </HelmetProvider>
+    </>
   );
 }

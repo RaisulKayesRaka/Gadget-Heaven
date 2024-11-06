@@ -1,10 +1,10 @@
 import { NavLink, Outlet } from "react-router-dom";
 import Heading from "./Heading";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 
 export default function Dashboard() {
   return (
-    <HelmetProvider>
+    <>
       <Helmet>
         <title>Dashboard | Gadget Heaven</title>
       </Helmet>
@@ -33,6 +33,6 @@ export default function Dashboard() {
         </div>
         <Outlet />
       </div>
-    </HelmetProvider>
+    </>
   );
 }

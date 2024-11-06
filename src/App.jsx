@@ -25,15 +25,13 @@ function App() {
       <Context.Provider
         value={{ productsInCart, productsInWishlist, updateState }}
       >
-        <HelmetProvider>
-          <Helmet>
-            <title>Gadget Heaven</title>
-          </Helmet>
-          <Toaster />
-          <Header />
-          <Outlet />
-          <Footer />
-        </HelmetProvider>
+        <Helmet>
+          <title>Gadget Heaven</title>
+        </Helmet>
+        <Toaster />
+        <Header />
+        <Outlet />
+        <Footer />
       </Context.Provider>
     </>
   );

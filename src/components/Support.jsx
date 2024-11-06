@@ -1,9 +1,9 @@
 import Heading from "./Heading";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 
 export default function Support() {
   return (
-    <HelmetProvider>
+    <>
       <Helmet>
         <title>Support | Gadget Heaven</title>
       </Helmet>
@@ -101,6 +101,6 @@ export default function Support() {
           </div>
         </div>
       </div>
-    </HelmetProvider>
+    </>
   );
 }
