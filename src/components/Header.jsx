@@ -8,14 +8,14 @@ export default function Header() {
     <>
       {location.pathname === "/" ? (
         <header>
-          <div className="mx-6 mt-6 rounded-t-xl bg-[#9538E2] text-white">
+          <div className="mx-4 mt-6 rounded-t-xl bg-[#9538E2] text-white md:mx-5 lg:mx-6">
             <Navbar />
           </div>
           <Banner />
         </header>
       ) : (
-        <header className="mx-6 mt-6">
-          <Navbar /> 
+        <header className="mx-4 mt-6 md:mx-5 lg:mx-6">
+          <Navbar />
         </header>
       )}
     </>

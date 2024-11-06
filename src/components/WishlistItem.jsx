@@ -5,7 +5,7 @@ export default function WishlistItem({
   handleAddToCart,
 }) {
   return (
-    <div className="flex w-full justify-between gap-6 rounded-xl bg-white p-6">
+    <div className="relative flex w-full flex-col justify-between gap-6 rounded-xl bg-white p-6 sm:flex-row">
       <div className="w-40">
         <img
           src={product.image}
@@ -25,7 +25,7 @@ export default function WishlistItem({
           Add to Cart
         </button>
       </div>
-      <div>
+      <div className="absolute right-6 top-6">
         <button
           onClick={() => handleRemoveFromWishlist(product)}
           className="flex rounded-full border border-red-500 p-1"

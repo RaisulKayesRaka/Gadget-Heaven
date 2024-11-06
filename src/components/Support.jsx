@@ -40,7 +40,10 @@ export default function Support() {
                   className="w-full rounded border p-2"
                 ></textarea>
               </div>
-              <button onClick={(event) => {event.preventDefault()}}
+              <button
+                onClick={(event) => {
+                  event.preventDefault();
+                }}
                 type="submit"
                 className="rounded-full bg-[#9538E2] px-4 py-2 text-white"
               >

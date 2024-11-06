@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom"
+import { useLoaderData, useParams } from "react-router-dom";
 import Card from "./Card";
 import { useEffect, useState } from "react";
 
@@ -8,20 +8,16 @@ export default function ProductCards() {
   const [filteredData, setFilteredData] = useState(data);
   useEffect(() => {
     if (category) {
-      setFilteredData(data.filter((product) => product.category === category))
+      setFilteredData(data.filter((product) => product.category === category));
+    } else {
+      setFilteredData(data);
     }
-    else {
-      setFilteredData(data)
-    }
-  },[category, data])
+  }, [category, data]);
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {
-            filteredData.map((product) => (
-                <Card key={product.id} product={product} />
-            ))
-        }
+    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {filteredData.map((product) => (
+        <Card key={product.id} product={product} />
+      ))}
     </div>
-
-  )
+  );
 }

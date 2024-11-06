@@ -1,6 +1,6 @@
 import { Outlet, useLoaderData } from "react-router-dom";
 import Categories from "./Categories";
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export default function Home() {
   const categories = useLoaderData();
@@ -9,25 +9,24 @@ export default function Home() {
       <Helmet>
         <title>Gadget Heaven</title>
       </Helmet>
-    <section>
+      <section>
+        <div className="mx-auto mb-24 w-11/12 max-w-screen-xl">
+          <h2 className="mb-8 text-center text-2xl font-bold sm:text-3xl">
+            Explore Cutting-Edge Gadgets
+          </h2>
+          <div className="flex flex-col gap-6 sm:flex-row">
+            <div>
+              <div className="rounded-xl bg-white p-4">
+                <Categories categories={categories} />
+              </div>
+            </div>
 
-      <div className="mx-auto mb-24 w-11/12 max-w-screen-xl">
-        <h2 className="mb-8 text-center text-3xl font-bold">
-          Explore Cutting-Edge Gadgets
-        </h2>
-        <div className="flex gap-6 flex-col sm:flex-row">
-          <div>
-            <div className="rounded-xl bg-white p-4">
-              <Categories categories={categories} />
+            <div className="flex-1">
+              <Outlet />
             </div>
           </div>
-
-          <div className="flex-1">
-            <Outlet />
-          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </HelmetProvider>
   );
 }

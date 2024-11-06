@@ -37,9 +37,9 @@ export default function Cart() {
 
   return (
     <div className="mx-auto w-11/12 max-w-screen-xl">
-      <div className="my-8 flex items-center justify-between">
+      <div className="my-8 flex flex-col items-center justify-between sm:flex-row">
         <h2 className="text-xl font-bold">Cart</h2>
-        <div className="flex items-center justify-center gap-4">
+        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
           <h2 className="text-xl font-bold">
             Total cost: ${cartItems.reduce((a, b) => a + b.price, 0)}
           </h2>
@@ -49,7 +49,8 @@ export default function Cart() {
           >
             Sort by Price <img src="/assets/sort.svg" alt="" />
           </button>
-          <button disabled={cartItems.length === 0}
+          <button
+            disabled={cartItems.length === 0}
             onClick={() => handlePurchase()}
             className="rounded-full bg-[#9538E2] px-6 py-3 text-white disabled:bg-[#9538E2]/50"
           >
@@ -78,7 +79,10 @@ export default function Cart() {
 
           <div className="modal-action">
             <form method="dialog" className="w-full">
-              <button onClick={()=>navigate("/")} className="w-full rounded-full bg-gray-200 px-4 py-2">
+              <button
+                onClick={() => navigate("/")}
+                className="w-full rounded-full bg-gray-200 px-4 py-2"
+              >
                 Close
               </button>
             </form>

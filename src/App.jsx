@@ -9,16 +9,22 @@ import { getAllProductsFromCart, getAllProductsFromWishlist } from ".";
 export const Context = createContext(null);
 
 function App() {
-  const [productsInCart, setProductsInCart] = useState(getAllProductsFromCart());
-  const [productsInWishlist, setProductsInWishlist] = useState(getAllProductsFromWishlist());
+  const [productsInCart, setProductsInCart] = useState(
+    getAllProductsFromCart(),
+  );
+  const [productsInWishlist, setProductsInWishlist] = useState(
+    getAllProductsFromWishlist(),
+  );
   const updateState = () => {
     setProductsInCart(getAllProductsFromCart());
     setProductsInWishlist(getAllProductsFromWishlist());
-  }
+  };
 
   return (
     <>
-      <Context.Provider value={{productsInCart, productsInWishlist, updateState}}>
+      <Context.Provider
+        value={{ productsInCart, productsInWishlist, updateState }}
+      >
         <HelmetProvider>
           <Helmet>
             <title>Gadget Heaven</title>

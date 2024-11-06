@@ -39,6 +39,7 @@ const router = createBrowserRouter([
       {
         path: "/statistics",
         element: <Statistics />,
+        loader: () => fetch("../data/products.json"),
       },
       {
         path: "/dashboard",
@@ -52,7 +53,7 @@ const router = createBrowserRouter([
             path: "/dashboard/wishlist",
             element: <Wishlist />,
           },
-        ]
+        ],
       },
       {
         path: "/support",

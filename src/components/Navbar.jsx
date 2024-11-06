@@ -48,7 +48,7 @@ export default function Navbar() {
               </li>
             </ul>
           </div>
-          <a className="text-xl font-bold">Gadget Heaven</a>
+          <a className="text-lg font-bold sm:text-xl">Gadget Heaven</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal gap-4 px-1">
@@ -124,7 +124,8 @@ export default function Navbar() {
                   {productsInWishlist.length} Items
                 </span>
                 <span className="text-info">
-                  Subtotal: ${productsInWishlist.reduce((a, b) => a + b.price, 0)}
+                  Subtotal: $
+                  {productsInWishlist.reduce((a, b) => a + b.price, 0)}
                 </span>
                 <div className="card-actions">
                   <NavLink

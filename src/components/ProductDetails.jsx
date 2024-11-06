@@ -19,8 +19,8 @@ export default function ProductDetails() {
       setInWishlist(true);
     }
   }, [data, id]);
-  const {updateState} = useContext(Context);
-  
+  const { updateState } = useContext(Context);
+
   const handleAddToCart = (product) => {
     addToCart(product);
     updateState();
@@ -44,7 +44,7 @@ export default function ProductDetails() {
         />
         <div className="relative">
           <div className="mx-auto max-w-screen-lg rounded-2xl bg-white p-4">
-            <div className="flex items-center justify-center">
+            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <div className="flex-1">
                 <img src={product.image} alt="" />
               </div>
