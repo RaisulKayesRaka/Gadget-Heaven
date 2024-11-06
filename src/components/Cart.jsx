@@ -1,14 +1,18 @@
-import { useState } from "react";
+import {  useContext, useState } from "react";
 import CartItem from "./CartItem";
 import { getAllProductsFromCart, removeFromCart } from "..";
+import { Context } from "../App";
 
 export default function Cart() {
   const [cartItems, setCartItems] = useState(getAllProductsFromCart());
+  const {updateState} = useContext(Context);
 
   const handleRemoveFromCart = (product) => {
     removeFromCart(product);
     setCartItems(getAllProductsFromCart());
+    updateState();
   };
+
 
   const handleSortByPrice = () => {
     const sortedCartItems = [...cartItems].sort((a, b) => b.price - a.price);

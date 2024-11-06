@@ -1,19 +1,23 @@
-import { useState } from "react";
+import {  useContext, useState } from "react";
 import { addToCart, getAllProductsFromWishlist, removeFromWishlist } from "..";
 import WishlistItem from "./WishlistItem";
+import { Context } from "../App";
 
 export default function Wishlist() {
   const [wishlistItems, setWishlistItems] = useState(getAllProductsFromWishlist());
+  const {updateState} = useContext(Context);
 
   const handleRemoveFromWishlist = (product) => {
     removeFromWishlist(product);
     setWishlistItems(getAllProductsFromWishlist());
+    updateState();
   };
 
   const handleAddToCart = (product) => {
     addToCart(product);
     removeFromWishlist(product);
     setWishlistItems(getAllProductsFromWishlist());
+    updateState();
   };
   
   return (

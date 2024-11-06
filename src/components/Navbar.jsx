@@ -1,16 +1,9 @@
 import { NavLink } from "react-router-dom";
-import { getAllProductsFromCart, getAllProductsFromWishlist } from "..";
-import { useEffect, useState } from "react";
+import { useContext } from "react";
+import { Context } from "../App";
 
 export default function Navbar() {
-  const [cart, setCart] = useState([]);
-
-  const [wishlist, setWishlist] = useState([]);
-
-  useEffect(() => {
-    setCart(getAllProductsFromCart());
-    setWishlist(getAllProductsFromWishlist());
-  }, []);
+  const {productsInCart, productsInWishlist} = useContext(Context);
 
   return (
     <section className="py-2">
@@ -86,7 +79,7 @@ export default function Navbar() {
               <div className="indicator">
                 <img src="/src/assets/cart.svg" alt="" className="h-5 w-5" />
                 <span className="badge indicator-item badge-sm">
-                  {cart.length}
+                  {productsInCart.length}
                 </span>
               </div>
             </div>
@@ -96,10 +89,10 @@ export default function Navbar() {
             >
               <div className="card-body">
                 <span className="text-lg font-bold text-black">
-                  {cart.length} Items
+                  {productsInCart.length} Items
                 </span>
                 <span className="text-info">
-                  Subtotal: {cart.reduce((a, b) => a + b.price, 0)}
+                  Subtotal: {productsInCart.reduce((a, b) => a + b.price, 0)}
                 </span>
                 <div className="card-actions">
                   <button className="btn btn-block bg-[#9538E2] text-white">
@@ -118,7 +111,7 @@ export default function Navbar() {
               <div className="indicator">
                 <img src="/src/assets/heart.svg" alt="" className="h-5 w-5" />
                 <span className="badge indicator-item badge-sm">
-                  {wishlist.length}
+                  {productsInWishlist.length}
                 </span>
               </div>
             </div>
@@ -128,10 +121,11 @@ export default function Navbar() {
             >
               <div className="card-body">
                 <span className="text-lg font-bold text-black">
-                  {wishlist.length} Items
+                  {productsInWishlist.length} Items
                 </span>
                 <span className="text-info">
-                  Subtotal: {wishlist.reduce((a, b) => a + b.price, 0)}
+                  Subtotal:{" "}
+                  {productsInWishlist.reduce((a, b) => a + b.price, 0)}
                 </span>
                 <div className="card-actions">
                   <button className="btn btn-block bg-[#9538E2] text-white">

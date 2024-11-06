@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import Heading from "./Heading";
 import ReactStars from "react-rating-stars-component";
 import { addToCart, addToWishlist, getAllProductsFromWishlist } from "..";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Context } from "../App";
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -18,14 +19,17 @@ export default function ProductDetails() {
       setInWishlist(true);
     }
   }, [data, id]);
-
+  const {updateState} = useContext(Context);
+  
   const handleAddToCart = (product) => {
     addToCart(product);
+    updateState();
   };
 
   const handleAddToWishlist = (product) => {
     addToWishlist(product);
     setInWishlist(true);
+    updateState();
   };
 
   return (
