@@ -7,16 +7,16 @@ export default function Header() {
   return (
     <>
       {location.pathname === "/" ? (
-        <section>
+        <header>
           <div className="mx-6 mt-6 rounded-t-xl bg-[#9538E2] text-white">
             <Navbar />
           </div>
           <Banner />
-        </section>
+        </header>
       ) : (
-        <div className="mx-6 mt-6">
+        <header className="mx-6 mt-6">
           <Navbar /> 
-        </div>
+        </header>
       )}
     </>
   );

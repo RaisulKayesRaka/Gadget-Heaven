@@ -1,7 +1,7 @@
 
 export default function Footer() {
   return (
-    <section className="bg-white">
+    <footer className="bg-white">
         <div className="mx-auto w-11/12 max-w-screen-xl py-24">
         <h2 className="text-2xl text-center font-bold mb-3">Gadget Heaven</h2>
         <p className="mb-6 text-center">Leading the way in cutting-edge technology and innovation.</p>
@@ -34,6 +34,6 @@ export default function Footer() {
             </div>
         </div>
     </div>
-    </section>
+    </footer>
   )
 }

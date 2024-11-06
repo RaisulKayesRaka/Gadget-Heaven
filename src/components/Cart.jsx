@@ -41,13 +41,13 @@ export default function Cart() {
         <h2 className="text-xl font-bold">Cart</h2>
         <div className="flex items-center justify-center gap-4">
           <h2 className="text-xl font-bold">
-            Total cost: {cartItems.reduce((a, b) => a + b.price, 0)}
+            Total cost: ${cartItems.reduce((a, b) => a + b.price, 0)}
           </h2>
           <button
             onClick={handleSortByPrice}
             className="flex gap-2 rounded-full border border-[#9538E2] px-6 py-3 font-bold text-[#9538E2]"
           >
-            Sort by Price <img src="../src/assets/sort.svg" alt="" />
+            Sort by Price <img src="/assets/sort.svg" alt="" />
           </button>
           <button disabled={cartItems.length === 0}
             onClick={() => handlePurchase()}
@@ -69,12 +69,12 @@ export default function Cart() {
       <dialog id="my_modal_1" className="modal">
         <div className="modal-box">
           <div className="mb-4 flex justify-center">
-            <img src="../src/assets/success.svg" alt="" className="h-20 w-20" />
+            <img src="/assets/success.svg" alt="" className="h-20 w-20" />
           </div>
           <h3 className="text-center text-2xl font-bold">Payment Successful</h3>
           <hr className="my-4 w-full" />
           <p className="mb-2 text-center">Thanks for purchasing!</p>
-          <p className="mb-4 text-center">Total: {total}</p>
+          <p className="mb-4 text-center">Total: ${total}</p>
 
           <div className="modal-action">
             <form method="dialog" className="w-full">

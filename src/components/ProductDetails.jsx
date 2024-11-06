@@ -51,7 +51,7 @@ export default function ProductDetails() {
               <div className="flex-1">
                 <h3 className="mb-3 text-2xl font-bold">{product.title}</h3>
                 <p className="mb-4 text-lg font-semibold">
-                  Price: {product.price} Tk
+                  Price: ${product.price}
                 </p>
                 <span
                   className={`${product.availability ? "bg-green-50 text-green-500" : "bg-red-50 text-red-500"} rounded-full border px-2 py-1`}
@@ -94,7 +94,7 @@ export default function ProductDetails() {
                     onClick={() => handleAddToWishlist(product)}
                     className="aspect-square rounded-full border bg-white p-3 font-bold disabled:bg-gray-100"
                   >
-                    <img src="../src/assets/heart.svg" alt="" />
+                    <img src="/assets/heart.svg" alt="" />
                   </button>
                 </div>
               </div>

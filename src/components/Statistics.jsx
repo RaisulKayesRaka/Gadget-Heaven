@@ -1,4 +1,5 @@
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import Heading from "./Heading";
 
 export default function Statistics() {
   return (
@@ -7,7 +8,10 @@ export default function Statistics() {
         <title>Statistics | Gadget Heaven</title>
       </Helmet>
       <div>
-        <h1>Statistics</h1>
+      <Heading
+          title="Statistics"
+          description="Check out the statistics of our products to get a deeper understanding of our offerings. Our team of experts is always on the lookout for new and exciting trends."
+        />
       </div>
     </HelmetProvider>
   )

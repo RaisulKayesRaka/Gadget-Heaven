@@ -11,7 +11,7 @@ export default function Dashboard() {
       <div>
       <Heading
         title="Dashboard"
-        description="Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!"
+        description="Manage your product cart and wishlist here. Add, edit, and delete products from your cart and wishlist. Keep track of your total cost and payment status."
       />
       <div className="flex items-center justify-center gap-6 bg-[#9538E2] pb-8">
         <NavLink

@@ -8,12 +8,9 @@ const getAllProductsFromCart = () => {
 const addToCart = (product) => {
     const cart = getAllProductsFromCart();
 
-    if (cart.find((item) => item.id == product.id)) {
-        return toast.error("Product already in cart");
-    }
     cart.push(product);
     localStorage.setItem("cart", JSON.stringify(cart));
-    toast.success("Product successfully added to cart");
+    toast.success("Product added to cart.");
 };
 
 const removeFromCart = (product) => {
@@ -32,7 +29,7 @@ const addToWishlist = (product) => {
 
     wishlist.push(product);
     localStorage.setItem("wishlist", JSON.stringify(wishlist));
-    toast.success("Product successfully added to wishlist");
+    toast.success("Product added to wishlist.");
 };
 
 const removeFromWishlist = (product) => {

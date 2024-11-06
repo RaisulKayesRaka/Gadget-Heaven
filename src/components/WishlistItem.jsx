@@ -16,7 +16,7 @@ export default function WishlistItem({
       <div className="flex-1">
         <h3 className="mb-3 text-lg font-bold">{product.title}</h3>
         <p className="mb-3">{product.description}</p>
-        <p className="font-semibold">Price: {product.price} Tk</p>
+        <p className="font-semibold">Price: ${product.price}</p>
 
         <button
           onClick={() => handleAddToCart(product)}
@@ -30,7 +30,7 @@ export default function WishlistItem({
           onClick={() => handleRemoveFromWishlist(product)}
           className="flex rounded-full border border-red-500 p-1"
         >
-          <img src="../src/assets/cancel.svg" alt="" />
+          <img src="/assets/cancel.svg" alt="" />
         </button>
       </div>
     </div>

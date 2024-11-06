@@ -13,11 +13,11 @@ export default function CartItem({ product ,handleRemoveFromCart}) {
       <div className="flex-1">
         <h3 className="mb-3 text-lg font-bold">{product.title}</h3>
         <p className="mb-3">{product.description}</p>
-        <p className="font-semibold">Price: {product.price} Tk</p>
+        <p className="font-semibold">Price: ${product.price}</p>
       </div>
       <div>
         <button onClick={() => handleRemoveFromCart(product)} className="flex rounded-full border border-red-500 p-1">
-          <img src="../src/assets/cancel.svg" alt="" />
+          <img src="/assets/cancel.svg" alt="" />
         </button>
       </div>
     </div>

@@ -21,7 +21,7 @@ export default function Banner() {
       <div className="relative">
         <div className="mx-auto max-w-screen-lg rounded-2xl border-2 bg-white/20 p-4">
           <img
-            src="./src/assets/banner.jpg"
+            src="/assets/banner.jpg"
             alt=""
             className="aspect-video rounded-2xl object-cover"
           />

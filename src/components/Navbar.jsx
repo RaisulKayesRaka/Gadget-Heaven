@@ -6,7 +6,7 @@ export default function Navbar() {
   const { productsInCart, productsInWishlist } = useContext(Context);
 
   return (
-    <section className="py-2">
+    <nav className="py-2">
       <div className="navbar mx-auto w-11/12 max-w-screen-xl">
         <div className="navbar-start">
           <div className="dropdown">
@@ -74,7 +74,7 @@ export default function Navbar() {
               className="btn btn-circle bg-white shadow-none"
             >
               <div className="indicator">
-                <img src="/src/assets/cart.svg" alt="" className="h-5 w-5" />
+                <img src="/assets/cart.svg" alt="" className="h-5 w-5" />
                 <span className="badge indicator-item badge-sm">
                   {productsInCart.length}
                 </span>
@@ -89,7 +89,7 @@ export default function Navbar() {
                   {productsInCart.length} Items
                 </span>
                 <span className="text-info">
-                  Subtotal: {productsInCart.reduce((a, b) => a + b.price, 0)}
+                  Subtotal: ${productsInCart.reduce((a, b) => a + b.price, 0)}
                 </span>
                 <div className="card-actions">
                   <NavLink
@@ -109,7 +109,7 @@ export default function Navbar() {
               className="btn btn-circle bg-white shadow-none"
             >
               <div className="indicator">
-                <img src="/src/assets/heart.svg" alt="" className="h-5 w-5" />
+                <img src="/assets/heart.svg" alt="" className="h-5 w-5" />
                 <span className="badge indicator-item badge-sm">
                   {productsInWishlist.length}
                 </span>
@@ -124,8 +124,7 @@ export default function Navbar() {
                   {productsInWishlist.length} Items
                 </span>
                 <span className="text-info">
-                  Subtotal:{" "}
-                  {productsInWishlist.reduce((a, b) => a + b.price, 0)}
+                  Subtotal: ${productsInWishlist.reduce((a, b) => a + b.price, 0)}
                 </span>
                 <div className="card-actions">
                   <NavLink
@@ -140,6 +139,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-    </section>
+    </nav>
   );
 }
