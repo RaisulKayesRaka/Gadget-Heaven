@@ -32,7 +32,6 @@ export default function Dashboard() {
         </NavLink>
       </div>
       <Outlet />
-      <div className="h-24"></div>
     </div>
     </HelmetProvider>
   );

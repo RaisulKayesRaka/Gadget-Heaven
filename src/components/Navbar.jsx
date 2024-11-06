@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { Context } from "../App";
 
 export default function Navbar() {
-  const {productsInCart, productsInWishlist} = useContext(Context);
+  const { productsInCart, productsInWishlist } = useContext(Context);
 
   return (
     <section className="py-2">
@@ -36,9 +36,6 @@ export default function Navbar() {
             >
               <li>
                 <NavLink to="/">Home</NavLink>
-              </li>
-              <li>
-                <NavLink to="/about">About Us</NavLink>
               </li>
               <li>
                 <NavLink to="/statistics">Statistics</NavLink>
@@ -95,9 +92,12 @@ export default function Navbar() {
                   Subtotal: {productsInCart.reduce((a, b) => a + b.price, 0)}
                 </span>
                 <div className="card-actions">
-                  <button className="btn btn-block bg-[#9538E2] text-white">
+                  <NavLink
+                    to="/dashboard/cart"
+                    className="btn btn-block bg-[#9538E2] text-white"
+                  >
                     View cart
-                  </button>
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -128,9 +128,12 @@ export default function Navbar() {
                   {productsInWishlist.reduce((a, b) => a + b.price, 0)}
                 </span>
                 <div className="card-actions">
-                  <button className="btn btn-block bg-[#9538E2] text-white">
+                  <NavLink
+                    to="/dashboard/wishlist"
+                    className="btn btn-block bg-[#9538E2] text-white"
+                  >
                     View wishlist
-                  </button>
+                  </NavLink>
                 </div>
               </div>
             </div>
